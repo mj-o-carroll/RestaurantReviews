@@ -1,0 +1,25 @@
+<% provide(:title, 'Post') %>
+<h1>Add Review</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@review) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: "Restaurant name..." %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address, placeholder: "Restaurant address..." %>
+
+      <%= f.label :phone %>
+      <%= f.text_field :phone, placeholder: "Restaurant phone number, no spaces..."  %>
+
+      <%= f.label :comments %>
+      <%= f.text_area :comments, placeholder: "Compose new review..." %>
+
+      
+
+      <%= f.submit "Post Comment", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<li>
+  <span class="content"><%= review.name %></span>
+  <span class="content"><%= truncate(review.comments, :length => 30) %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(review.created_at) %> ago.
+    <%= link_to " see more ", review %>
+  </span>
+  <% if current_user?(review.user) %>
+    <%= link_to "| delete", review, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: review.comments %>
+  <% end %>
+  
+</li>
+
+
+

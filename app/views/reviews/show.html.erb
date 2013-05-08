@@ -1,0 +1,24 @@
+<% provide(:title, @review.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      
+      <h2 style="text-align:left;color:sienna;">
+        <%= @review.name %></h2>
+
+        <h2 style="text-align:left">
+        <%= @review.address %>
+      </h2>
+      <h4 style="text-align:left"><%= @review.phone %></h4>
+
+    </section>
+  </aside>
+  <div class="span8">
+  	<h2 style="text-align:left;color:blue;">Review</h2>
+    <section>
+  	<p><%= @review.comments %></p>
+    </section>
+    <p>Posted <%= time_ago_in_words(@review.created_at) %> ago.</p>
+  <br>
+  <hr>
+</div> 

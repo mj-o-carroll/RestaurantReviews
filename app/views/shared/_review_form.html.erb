@@ -1,0 +1,10 @@
+<%= form_for(@review) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Restaurant name..." %>
+    <%= f.text_field :address, placeholder: "Restaurant address..." %>
+    <%= f.text_field :phone, placeholder: "Restaurant phone number, no spaces..." %>
+    <%= f.text_area :comments, placeholder: "Compose new review..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>
